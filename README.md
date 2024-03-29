@@ -4,7 +4,9 @@ The goal of this project is to demonstrate a simple write behind caching mechani
 
 For the need of this demo, the use case is simple: we want to add a user to the database.
 
-An user object consists of a LastName, FirstName and Age.
+Our user object consists of a LastName, FirstName and Age.
 
 The goal of a write-behind caching strategy is to process the write directly to the caching system first, and then asynchronously write to the database. 
 In comparaison to a write-through caching strategy, the write-behind strategy improves the write performance (the user doesnt have to wait for the write to complete(i.e for the write to be processed by the database).
+
+This simple project will then go multiple stages where i'll first convert all the pieces of the system architecture into micro services, then we'll add a k8s layer onto it, then i'll convert everything to AWS.
